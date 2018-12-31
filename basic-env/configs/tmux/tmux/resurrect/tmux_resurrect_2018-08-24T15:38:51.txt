@@ -1,0 +1,8 @@
+pane	0	2	:sbt	1	:*	1	:/home/caente/xdotai/xdotai-scala	0	nvim	:nvim
+pane	0	2	:sbt	1	:*	2	:/home/caente/xdotai/xdotai-scala	1	bash	:bash /usr/bin/sbt -mem 1500
+pane	2	1	:~	1	:*	1	:/home/caente	1	zsh	:
+pane	3	1	:nvim	1	:*	1	:/home/caente	1	nvim	:nvim
+window	0	2	1	:*	74fc,230x57,0,0{135x57,0,0,4,94x57,136,0,5}
+window	2	1	1	:*	c963,230x57,0,0,6
+window	3	1	1	:*	c964,230x57,0,0,7
+state	0	2

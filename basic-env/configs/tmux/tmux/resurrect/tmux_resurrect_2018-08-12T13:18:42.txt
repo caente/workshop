@@ -1,0 +1,10 @@
+pane	0	1	:nvim	1	:*M	1	:/home/caente	1	nvim	:nvim
+pane	0	1	:nvim	1	:*M	2	:/home/caente/Dropbox/workshop/query-handler	0	nvim	:nvim
+pane	0	1	:nvim	1	:*M	3	:/home/caente/Dropbox/workshop/query-handler	0	zsh	:
+pane	0	2	:../xdotai-scala	0	:-	1	:/home/caente/xdotai/xdotai-scala	1	zsh	:
+pane	0	2	:../xdotai-scala	0	:-	2	:/home/caente/xdotai/xdotai-scala	0	zsh	:
+pane	2	1	:~	1	:*	1	:/home/caente	1	zsh	:
+window	0	1	1	:*M	1ce7,212x60,0,0{122x60,0,0,5,89x60,123,0[89x37,123,0,6,89x22,123,38,7]}
+window	0	2	0	:-	9b4f,212x60,0,0{126x60,0,0,10,85x60,127,0,11}
+window	2	1	1	:*	afe6,212x60,0,0,9
+state	0	2

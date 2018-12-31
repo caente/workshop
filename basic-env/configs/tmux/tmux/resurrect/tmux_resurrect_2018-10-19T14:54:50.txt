@@ -1,0 +1,10 @@
+pane	0	2	:nvim	1	:*	1	:/home/caente/xdotai/xdotai-scala	1	nvim	:nvim
+pane	0	2	:nvim	1	:*	2	:/home/caente/xdotai/xdotai-scala	0	zsh	:
+pane	2	1	:~	1	:*	1	:/home/caente	1	zsh	:
+pane	3	1	:~	1	:*	1	:/home/caente	1	zsh	:
+pane	4	1	:~	1	:*	1	:/home/caente	1	zsh	:
+window	0	2	1	:*	b7c5,254x69,0,0{148x69,0,0,3,105x69,149,0,4}
+window	2	1	1	:*	d5e2,254x69,0,0,5
+window	3	1	1	:*	d5e3,254x69,0,0,6
+window	4	1	1	:*	d5e4,254x69,0,0,7
+state	0	2
