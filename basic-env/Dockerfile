@@ -88,7 +88,11 @@ WORKDIR $HOME
 
 # zsh config
 COPY configs/zsh/zshrc $HOME/.zshrc
+ENV HISTFILE=$HOME/.zhistory/.zsh_history
+RUN mkdir $HOME/.zhistory
 COPY configs/zsh/oh-my-zsh $HOME/.oh-my-zsh
+COPY configs/nvim/vim $HOME/.vim
+COPY configs/nvim/vimrc $HOME/.config/nvim/init.vim
 RUN echo '/usr/bin/zsh' >> $HOME/.bashrc
 COPY configs/tmux/tmux.conf $HOME/.tmux.conf
 RUN git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
