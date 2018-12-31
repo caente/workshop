@@ -77,11 +77,13 @@ RUN make CMAKE_BUILD_TYPE=Release
 RUN make install
 RUN rm -rf /usr/local/src/neovim
 
-RUN useradd -ms /bin/zsh caente
+ENV USERNAME=caente
 
-USER caente
+RUN useradd -ms /bin/zsh $USERNAME
 
-ENV HOME=/home/caente
+USER $USERNAME
+
+ENV HOME=/home/$USERNAME
 WORKDIR $HOME
 
 # zsh config
