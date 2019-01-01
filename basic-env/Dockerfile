@@ -30,7 +30,8 @@ RUN apt-get update && apt-get install -y \
       tzdata \
       wget \
       zsh \
-      xclip
+      xclip \
+      w3m
 
 RUN chsh -s /usr/bin/zsh
 

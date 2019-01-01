@@ -84,4 +84,4 @@ RUN echo "#require \"owl-top\";; open Owl;;" >> $HOME/.ocamlinit \
     && opam config env >> $HOME/.bashrc \
     && bash -c "source $HOME/.bashrc" 
 
-RUN opam install -y core
+RUN opam install -y core ocp-indent
