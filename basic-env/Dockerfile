@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 # Locales
 ENV LANGUAGE=en_US.UTF-8
@@ -22,21 +22,12 @@ RUN apt-get update && apt-get install -y \
       libncurses5-dev \
       libevent-dev \
       silversearcher-ag \
-      tzdata \
       wget \
       zsh \
       xclip \
-      w3m
-
-# Install tmux
-WORKDIR /usr/local/src
-RUN wget https://github.com/tmux/tmux/releases/download/2.5/tmux-2.5.tar.gz
-RUN tar xzvf tmux-2.5.tar.gz
-WORKDIR /usr/local/src/tmux-2.5
-RUN ./configure
-RUN make 
-RUN make install
-RUN rm -rf /usr/local/src/tmux*
+      w3m \
+      tmux \
+      fzy
 
 # Install neovim
 RUN apt-get install -y \
@@ -83,6 +74,10 @@ COPY configs/nvim/vimrc $HOME/.config/nvim/init.vim
 RUN echo '/usr/bin/zsh' >> $HOME/.bashrc
 COPY configs/tmux/tmux.conf $HOME/.tmux.conf
 RUN git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+
+USER root
+RUN chown -R $USERNAME $HOME
+USER caente
 
 RUN mkdir app
 
