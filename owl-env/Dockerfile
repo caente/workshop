@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM workhorse
+FROM basic-env
 
 USER root
 
