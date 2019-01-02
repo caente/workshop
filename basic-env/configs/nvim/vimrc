@@ -36,9 +36,9 @@ Plugin 'blueshirts/darcula'
 
 Plugin 'altercation/vim-colors-solarized'
 
-Plugin 'Shougo/deoplete.nvim'
+Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'}
 
-Plugin 'copy/deoplete-ocaml'
+Plugin 'copy/deoplete-ocaml', { 'do': ':UpdateRemotePlugins'}
 
 Plugin 'christoomey/vim-tmux-navigator'
 
