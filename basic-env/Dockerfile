@@ -77,7 +77,9 @@ RUN git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 
 USER root
 RUN chown -R $USERNAME $HOME
-USER caente
+USER $USERNAME
 
 RUN mkdir app
+
+RUN mkdir .tmux-resurrect
 

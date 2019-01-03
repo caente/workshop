@@ -2,6 +2,7 @@
 docker run -t -i \
   --mount type=bind,source="$(pwd)",target=/home/caente/app \
   -v zhistory:/home/caente/.zhistory \
+  -v tmux-sessions:/home/caente/.tmux-resurrect \
   $1 
 
 

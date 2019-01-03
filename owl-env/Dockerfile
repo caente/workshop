@@ -80,8 +80,26 @@ WORKDIR $HOME
 ############## SET UP DEFAULT CONTAINER VARS ##############
 
 RUN echo "#require \"owl-top\";; open Owl;;" >> $HOME/.ocamlinit \
+    echo "#require \"core.top\";; open Core;;" >> $HOME/.ocamlinit \
+    echo "#require \"core.syntax\";;" >> $HOME/.ocamlinit \
     && bash -c 'echo -e "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH" >> $HOME/.profile' \
     && opam config env >> $HOME/.bashrc \
     && bash -c "source $HOME/.bashrc" 
 
-RUN opam install -y core ocp-indent merlin
+RUN opam install -y user-setup core ocp-indent merlin
+
+RUN echo "let g:syntastic_ocaml_checkers = ['merlin']" | tee -a $HOME/.config/nvim/init.vim
+
+RUN echo "let g:opamshare = substitute(system('opam config var share'),'\\\n$','','''')" | tee -a $HOME/.config/nvim/init.vim
+
+RUN echo "execute \"set rtp+=\" . g:opamshare . \"/merlin/vim\"" | tee -a $HOME/.config/nvim/init.vim
+
+RUN echo "map <leader>t :MerlinTypeOf<cr>" | tee -a $HOME/.config/nvim/init.vim
+
+RUN echo "map <leader>j :MerlinLocate<cr>" | tee -a $HOME/.config/nvim/init.vim
+
+RUN ln -s $HOME/.config/nvim/init.vim $HOME/.vimrc
+
+RUN opam user-setup install merlin ocp-indent
+
+
