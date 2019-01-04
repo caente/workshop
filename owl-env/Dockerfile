@@ -80,8 +80,8 @@ WORKDIR $HOME
 ############## SET UP DEFAULT CONTAINER VARS ##############
 
 RUN echo "#require \"owl-top\";; open Owl;;" >> $HOME/.ocamlinit \
-    echo "#require \"core.top\";; open Core;;" >> $HOME/.ocamlinit \
-    echo "#require \"core.syntax\";;" >> $HOME/.ocamlinit \
+    && echo "#require \"core.top\";; open Core;;" >> $HOME/.ocamlinit \
+    && echo "#require \"core.syntax\";;" >> $HOME/.ocamlinit \
     && bash -c 'echo -e "export LD_LIBRARY_PATH=$LD_LIBRARY_PATH" >> $HOME/.profile' \
     && opam config env >> $HOME/.bashrc \
     && bash -c "source $HOME/.bashrc" 
